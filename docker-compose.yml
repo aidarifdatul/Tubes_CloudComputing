@@ -70,7 +70,7 @@ services:
       MYSQL_USER: Admin
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: rootpassword
-    volumes:
+    volumes:    
       - dbdata:/var/lib/mysql
     networks:
       - laravel
@@ -82,7 +82,7 @@ services:
     container_name: laravel_web
     restart: unless-stopped
     ports:
-      - "8081:80" # Port diubah menjadi 8081 untuk Nginx
+      - "8000:80" # Port diubah menjadi 8081 untuk Nginx
     volumes:
       - .:/var/www
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
